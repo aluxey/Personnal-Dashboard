@@ -37,6 +37,7 @@ const NewsCard = () => {
     const handleChange = (event) => {
         setCategory(event.target.value)
         fetchNews()
+        setCurrentPage(1)
     }
 
     return (
