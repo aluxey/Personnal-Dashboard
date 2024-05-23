@@ -1,9 +1,13 @@
-import './App.css';
+import React from 'react'; 
+import './index.css';
+import Weather from './components/Weather';
+import TBMUpdatesCard from './components/News';
 
 function App() {
   return (
     <div className="App">
-      Test
+      <Weather />
+      <TBMUpdatesCard />
     </div>
   );
 }
