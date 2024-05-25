@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const NewsCard = () => {
     const [newsData, setNewsData] = useState([]);
-    const [country, setCountry] = useState('fr');
+    const [country, ] = useState('fr');
     const [currentPage, setCurrentPage] = useState(1);
     const articlesPerPage = 2; 
 

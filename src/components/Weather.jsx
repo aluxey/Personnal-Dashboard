@@ -26,7 +26,7 @@ const Weather = () => {
       {weatherData && (     
         
 
-        <div class="flex items-center justify-center border-solid border-4 border-gray-600">
+        <div class="flex items-center justify-center border-solid border-4 border-gray-600 rounded-md">
             <div class="flex flex-col bg-white rounded p-4 w-full max-w-xs">
         		<div class="font-bold text-xl">{city}</div>
         		<div class="text-sm text-gray-500">Thursday 10 May 2020</div>
