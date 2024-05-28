@@ -4,6 +4,8 @@ import Weather from './components/Weather';
 import Navbar from './components/Navbar'; 
 import Finance from './components/Finance';
 import NewsCard from './components/News';
+import FinanceList from "./components/FinanceList";
+import Counter from "./components/Counter";
 
 function App() {
   return ( 
@@ -14,14 +16,20 @@ function App() {
           <Routes>
             <Route exact path="/" element={
               <>
-                <Weather /> 
+                <Weather />
+                <Counter />
                 <NewsCard />
                 <Finance />
               </>
             } />
             <Route path="/weather" element={<Weather />} /> 
-            <Route path="/news" element={<NewsCard />} /> 
-            <Route path="/finance" element={<Finance />} /> 
+            <Route path="/news" element={<NewsCard />} />
+            <Route path="/finance" element={
+              <>
+                <Finance />
+                <FinanceList />
+              </>
+            } />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
         </div>

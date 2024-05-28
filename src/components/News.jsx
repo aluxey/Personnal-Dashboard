@@ -19,8 +19,7 @@ const NewsCard = () => {
             const response = await axios.get(
                 `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`
             );
-            setNewsData(response.data.articles);
-            console.log(response.data);
+            setNewsData(response.data.articles); 
         } catch (error) {
             console.error('Error fetching the news data', error);
         }

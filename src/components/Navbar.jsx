@@ -6,7 +6,7 @@ import { faHome, faCloud, faNewspaper, faMoneyBill } from '@fortawesome/free-sol
 const Navbar = () => { 
 
     return ( 
-        <div className="h-screen w-64 bg-gray-800 text-white flex flex-col">
+        <div className=" w-64 bg-gray-800 text-white flex flex-col">
           <div className="flex items-center justify-center h-20 border-b border-gray-700">
           <h1 className='text-3xl font-bold primary-color ml-4'>A.LUXEY</h1>
           </div>
