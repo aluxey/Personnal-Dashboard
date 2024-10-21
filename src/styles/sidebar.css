@@ -1,0 +1,77 @@
+/* Sidebar Container */
+.sidebar {
+    background: grey;
+    min-width: 9vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Title Container */
+.sidebarContainerTitle {
+    background: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebarTitle {
+    font-size: 1.5em;
+    color: grey;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Sidebar Menu */
+.sidebarMenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 3vh;
+    width: 100%;
+}
+
+/* Sidebar Menu Items */
+.sidebarMenu li {
+    margin: 2vh 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebarMenu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+/* Icons with Text Styling */
+.sidebarMenu li a svg {
+    margin-right: 10px;
+}
+
+/* Hover effect on menu items */
+.sidebarMenu li a:hover {
+    background-color: #444;
+    color: bisque;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlight active page link (optional, if using active class) */
+.sidebarMenu li a.active {
+    background-color: #222;
+    font-weight: bold;
+}

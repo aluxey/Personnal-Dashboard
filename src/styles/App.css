@@ -37,3 +37,10 @@
   }
 }
 
+.body {
+  background: #474747;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
