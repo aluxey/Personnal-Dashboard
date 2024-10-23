@@ -5,128 +5,99 @@
     flex-direction: column;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
+    margin: 1.5rem auto;
+    max-width: 90%;
+    padding: 1.5rem;
 }
 
 .weather-container > * {
-    margin : 1vh;
+    margin: 1vh;
 }
 
-.weather-header{
-    display: flex;
-    flex-direction: column;
-    font-size: xx-large;
+/* Header and Details */
+.weather-header, .details section {
+    margin: 1.5rem 0;
 }
 
-.details{
-    display: flex;
-    flex-direction: row;
-    font-size: xx-large;
-}
-
-
-.details section{
-    margin: 25px;
-}
-
-/* Adding subtle hover effect */
-.weather-container:hover {
-    transform: scale(1.02);
-}
-
-/* Section Titles */
-.weather-container h1 {
-    font-size: 2rem;
-    color: #34495e;
-    margin-bottom: 15px;
-}
-
-.weather-container h2 {
+.weather-header h1, .details h2 {
     font-size: 1.5rem;
-    color: #2980b9;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    color: #34495e;
 }
 
-/* Paragraph Styling */
-.weather-container p {
+.time p {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Current Weather Conditions */
+.weather-conditions, .weather-details, .weather-atmosphere, .weather-extra {
+    text-align: left;
+}
+
+.weather-conditions h2, .details h2 {
+    color: #2980b9;
+    font-size: 1.3rem;
+}
+
+/* Temperature and Icon */
+.weather-temp p {
     font-size: 1.1rem;
     color: #34495e;
-    margin-bottom: 10px;
 }
 
-/* Temperature Styling */
 .weather-temp span {
     font-weight: bold;
     color: #e74c3c;
 }
 
-/* Weather Icon */
 .weather-icon {
+    margin: 1rem auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 15px;
 }
 
 .weather-icon img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+    width: 60px;
+    height: 60px;
 }
 
 .weather-icon p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #34495e;
 }
 
-/* Details Section */
-.weather-details, .weather-atmosphere, .weather-extra {
-    text-align: left;
-    margin-top: 20px;
+/* Flex Layout for Wind and Temp Details */
+.details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.weather-details p,
-.weather-atmosphere p,
-.weather-extra p {
+.details section {
+    width: calc(33.33% - 30px);
+    margin: 0.5rem;
+}
+
+.details p {
     font-size: 1rem;
     color: #2c3e50;
 }
 
-/* Flex Layout for Wind and Temp Details */
-.weather-temp, .wind-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
+    .details section {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     .weather-container {
-        padding: 20px;
-        max-width: 90%;
-    }
-
-    .weather-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .weather-container h2 {
-        font-size: 1.3rem;
+        max-width: 100%;
     }
 
     .weather-icon img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .weather-temp, .wind-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .weather-temp p, .wind-details p {
-        margin-bottom: 8px;
-        text-align: center;
+        width: 50px;
+        height: 50px;
     }
 }

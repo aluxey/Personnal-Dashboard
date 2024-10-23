@@ -6,6 +6,7 @@ import WeatherFull from './components/WeatherFull';
 import { TwitchAuthHandler, TwitchLogin } from './components/GetToken';
 import './styles/App.css';
 import TwitterTimeline from './components/Twitter';
+import { fetchMessage } from "./services/api";
 
 function App() {
   return (
