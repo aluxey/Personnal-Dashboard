@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faCloud, faNewspaper, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
-import "../styles/sidebar.css"
+import { faHome, faCloud, faInfo } from '@fortawesome/free-solid-svg-icons';
+import "../styles/sidebar.css";
 
 const Navbar = () => {
     return (
@@ -20,24 +20,26 @@ const Navbar = () => {
                 <li className="weatherIcon">
                     <Link to="/weather">
                         <FontAwesomeIcon icon={faCloud} />
-                        Weather
+                        Weather Full
                     </Link>
                 </li>
-                <li className="newsIcon">
-                    <Link to="/news">
-                        <FontAwesomeIcon icon={faNewspaper} />
-                        News
+                <li className="twitchIcon">
+                    {/* Make sure this links to the page with the TwitchLogin button */}
+                    <Link to="/twitch-login">
+                        <FontAwesomeIcon icon={faInfo} />
+                        Twitch
                     </Link>
                 </li>
-                <li className="financeIcon">
-                    <Link to="/finance">
-                        <FontAwesomeIcon icon={faMoneyBill} />
-                        Finance
+                <li className="twitchIcon">
+                    {/* Make sure this links to the page with the TwitchLogin button */}
+                    <Link to="/twitter">
+                        <FontAwesomeIcon icon={faInfo} />
+                        Twitter
                     </Link>
                 </li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;

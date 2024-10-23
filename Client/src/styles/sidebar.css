@@ -1,7 +1,7 @@
 /* Sidebar Container */
 .sidebar {
     background: grey;
-    min-width: 9vw;
+    min-width: 10vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

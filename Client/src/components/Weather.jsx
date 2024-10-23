@@ -10,9 +10,8 @@ const Weather = () => {
     const fetchWeather = async () => {
       try {
         const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-        console.log("Test de fou" + apiKey);
         const response = await axios.get(
-            `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
+            `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
         );
         setWeatherData(response.data);
       } catch (error) {
@@ -22,6 +21,9 @@ const Weather = () => {
     fetchWeather();
   }, [city]);
 
+  if (!weatherData) return <div>Loading...</div>;
+
+  const { location } = weatherData;
 
   return (
       <div>
@@ -29,7 +31,7 @@ const Weather = () => {
             <div className="weather-container">
               <div className="weather-card">
                 <div className="weather-city">{city}</div>
-                <div className="weather-date">Thursday 10 May 2020</div>
+                <div className="weather-date">{location.localtime}</div>
                 <div className="weather-icon">
                   <img src={weatherData.current.condition.icon} alt="weather icon"/>
                 </div>
